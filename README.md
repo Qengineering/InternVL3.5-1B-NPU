@@ -1,4 +1,4 @@
-# Qwen3-VL-2B NPU
+# InternVL3.5-1B NPU
 ![Alt text](https://github.com/user-attachments/assets/6d297a34-c516-4cb1-be4a-bca471d40fa6)
 <br><br>**User**:\<image\>Describe the image.<br><br>
 **Answer**: This is a surreal and imaginative photograph of an astronaut on the Moon, set against the backdrop of Earth in space.
@@ -17,7 +17,7 @@ The overall scene combines elements of science fiction and reality, creating an 
 
 ------------
 
-## Qwen3-2B VLM for RK3588 NPU (Rock 5, Orange Pi 5). <br/>
+## InternVL3.5-1B for RK3588 NPU (Rock 5, Orange Pi 5). <br/>
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)<br/><br/>
 Paper: [InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency](https://huggingface.co/papers/2508.18265)<br/><br/>
 Hugging face: https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct
