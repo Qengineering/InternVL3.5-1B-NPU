@@ -1,19 +1,7 @@
 # InternVL3.5-1B NPU
 ![Alt text](https://github.com/user-attachments/assets/6d297a34-c516-4cb1-be4a-bca471d40fa6)
 <br><br>**User**:\<image\>Describe the image.<br><br>
-**Answer**: This is a surreal and imaginative photograph of an astronaut on the Moon, set against the backdrop of Earth in space.
-
-The central figure is an astronaut wearing a white spacesuit with a gold-tinted helmet visor. The suit appears to be made of a light-colored fabric, possibly cotton or a synthetic material like nylon, which has been stretched over a rigid structure. The astronaut's posture is relaxed and casual; they are reclining on the lunar surface, their legs crossed at the ankles.
-
-The astronaut is holding a green glass bottle with a white label that reads "Coca-Cola" in red script. They appear to be drinking from it or have just finished pouring it into a small cup. The astronaut's right hand is resting on the bottle, while their left arm is bent and placed near their head.
-
-In front of the astronaut is a green cooler with a white stripe running along its side. The cooler has a label that reads "Coca-Cola" in red script. It appears to be filled with ice or frozen drinks.
-
-The background features the vastness of space, with stars visible in the dark sky. A large planet, Earth, is prominently displayed behind the astronaut and the Moon's surface. The Earth is shown as a blue and white sphere with swirling clouds and landmasses, partially illuminated by sunlight.
-
-On the right side of the image, there is a small ladder leading up to a structure on the lunar surface. This structure appears to be made of metal or concrete and has some kind of equipment attached to it.
-
-The overall scene combines elements of science fiction and reality, creating an atmosphere that is both humorous and mysterious. The juxtaposition of the astronaut's casual behavior with the vastness of space and Earth creates a sense of wonder and exploration.
+**Answer**: The image depicts an astronaut on the moon, holding a green bottle of beer and sitting next to a green cooler with some writing on it. The background shows Earth from space, highlighting the contrast between the moon's barren surface and the planet below.
 
 ------------
 
@@ -149,7 +137,7 @@ This specifies the maximum total number of tokens the model can process in one g
 
 A typical command line can be:
 ```bash
-./VLM_NPU ./Moon.jpg ./models/qwen3-vl-2b-vision_rk3588.rknn ./models/qwen3-vl-2b-instruct_w8a8_rk3588.rkllm 2048 4096
+./VLM_NPU ./Moon.jpg ./models/internvl3_5-1b_vision_rk3588.rknn ./models/internvl3_5-1b-instruct_w8a8_rk3588.rkllm 2048 4096
 ```
 The NewTokens (2048) and ContextLength (4096) are optional and can be omitted.
 ### Using the app.
@@ -208,60 +196,49 @@ std::cout << "\nLLM Answer: " << output_str << std::endl;
 ## VLM examples.
 | Image         | Dialog |
 | --------------| --  |
-| ![Singapore_S](https://github.com/user-attachments/assets/e742059a-3bdb-41be-9647-e7767da12ce6) |**User**: \<image\>Which city is this?<br>**Answer**: This is Singapore, a city in Southeast Asia known for its modern architecture and vibrant culture. It's located on the island of Singapore, which is part of Malaysia but has been an independent nation since 1965.<br><br>The image shows several iconic landmarks:<br>- The Marina Bay Sands hotel with its distinctive "sky garden" design.<br>- The Singapore Flyer, a large observation wheel.<br>- The city's skyline at dusk, reflecting beautifully on the water. | 
-| ![ChineseWall_S](https://github.com/user-attachments/assets/3ba4b57a-4b22-4050-b995-9599c6d239de) |**User**: \<image\>Tell me something about the history of this place.<br>**Answer**: The image shows the **Great Wall of China**, one of the most iconic and historically significant structures in human civilization.<br><br>Here is some information about its history:<br><br>- The Great Wall was built over several centuries by various Chinese dynasties to protect against invasions from nomadic groups, particularly the Mongols.<br>- Construction began during the **Qin Dynasty** (221–206 BCE), but it wasn't until the **Ming Dynasty** (1368–1644) that the wall was expanded and fortified in a massive scale. The Ming builders used advanced techniques to construct walls, towers, and watchtowers.<br>- The Great Wall stretches over 13,000 miles (21,000 kilometers), with many sections built on different dates and by different dynasties.<br>- It is not just a wall but also a symbol of Chinese engineering, military strategy, and cultural identity. Today, it is one of the most visited tourist attractions in China.<br><br>The Great Wall has been an important part of Chinese history for over 2,000 years and continues to be a source of pride for the Chinese people.|
-| ![Pizza_S](https://github.com/user-attachments/assets/26fd5da3-f491-4b48-978a-14eae0819247) |**User**: \<image\>What are the ingredients I need to make this?<br>**Answer**: Based on the image provided, this appears to be a classic **Neapolitan-style pizza** or a similar style of **pizza al taglio**, which is known for its simple and authentic ingredients.<br><br>The key components visible in the picture are:<br>-   **Pizza Base:** A round, thin-crust base made from dough.<br>-   **Tomato Sauce:** The red sauce that forms the foundation of the pizza.<br>-   **Cheese:** Typically mozzarella cheese, which is melted over the top.<br>-   **Fresh Basil Leaves:** Used as a garnish and for flavor.<br><br>The most important ingredient to note is the **crust**. This type of crust is often made from a special dough that's traditionally fermented in a wooden oven (a "forno" or "forno di legno") and has a very thin, delicate texture. The pizza is then cooked at high temperatures until it becomes golden brown.<br><br>The ingredients you would need to make this are:<br>-   **Dough:** A simple dough made from flour, water, salt, and sometimes yeast.<br>-   **Tomato Sauce:** A basic tomato sauce made with fresh tomatoes, garlic, olive oil, and seasonings.<br>-   **Mozzarella Cheese:** Fresh mozzarella cheese is typically used for this type of pizza.<br>-   **Fresh Basil Leaves:** For garnish and flavor.<br><br>The key difference from a typical pizza is the use of a very thin crust that's cooked in a wood-fired oven. This gives it a unique texture and flavor, which is why it's often considered a specialty item at Italian restaurants.<br><br>**User**: What is the first step?<br>**Answer**:Based on the image provided, the first step to make this pizza is to **prepare the dough**.<br><br>Here’s a breakdown of what you need to do:<br>1.  **Prepare the Dough:** You will need to mix flour, water, salt, and sometimes yeast to create a soft, pliable dough.<br>2.  **Knead the Dough:** Knead the dough until it becomes smooth and elastic.<br>3.  **Let It Rest:** Let the dough rest for about an hour or two in a warm place.<br>4.  **Shape the Dough:** After resting, shape the dough into a ball and let it rise again for another hour or so.<br><br>Once you have prepared the dough, you can proceed to make the pizza by spreading tomato sauce on top of the dough, adding mozzarella cheese, and finally placing fresh basil leaves on top.|
-| ![Titanic_S](https://github.com/user-attachments/assets/bf6da76c-c9a4-41c6-bea1-2b4411dd4013) |**User**: \<image\>Which movie is this?<br>**Answer**: This is the 2008 film *Titanic*, directed by James Cameron. It's an epic romantic drama that tells the story of a young woman, Rose, and her love for Jack Dawson on the ill-fated ship Titanic during its maiden voyage in 1912.<br><br>The image shows Leonardo DiCaprio as Jack Dawson and Kate Winslet as Rose DeWitt, both iconic characters from the film. The scene is set against a dramatic sunset over the ocean, capturing their emotional journey and the tragic fate of the ship.|
+| ![Singapore_S](https://github.com/user-attachments/assets/e742059a-3bdb-41be-9647-e7767da12ce6) |**User**: \<image\>Which city is this?<br>**Answer**: This image depicts the skyline of Singapore, known for its iconic Marina Bay Sands hotel and the Singapore Flyer Ferris wheel. The cityscape features several notable landmarks, including the distinctive ArtScience Museum shaped like an open shell, which is a unique architectural feature in Singapore. | 
+| ![ChineseWall_S](https://github.com/user-attachments/assets/3ba4b57a-4b22-4050-b995-9599c6d239de) |**User**: \<image\>Tell me something about the history of this place.<br>**Answer**: The Great Wall of China is one of the most iconic and historically significant structures in the world, spanning over 13,000 miles across several Chinese dynasties. Constructed primarily during the Qin Dynasty (221-206 BCE) to protect against invasions by nomadic tribes such as the Xiongnu, it has been expanded and rebuilt multiple times throughout history.<br><br>The wall's construction was a response to various threats, including raids from the northern tribes and internal rebellions. It served not only as a defensive barrier but also as a symbol of Chinese power and unity. The Great Wall is now a UNESCO World Heritage Site and attracts millions of visitors each year who come to admire its grandeur and historical significance.<br><br>Despite being over 2,000 years old, the wall has endured through various eras of conflict and natural disasters, including earthquakes and floods. Today, it stands as a testament to human ingenuity and resilience in the face of adversity. |
+| ![Pizza_S](https://github.com/user-attachments/assets/26fd5da3-f491-4b48-978a-14eae0819247) |**User**: \<image\>What are the ingredients I need to make this?<br>**Answer**: To make a delicious pizza, you'll need these basic ingredients:<br>1. **Pizza Dough**: You can use scratchy or regular dough.<br>2. **Tomato Sauce**: A mixture of tomato sauce and water.<br>3. **Cheese**: Mozzarella cheese is the classic choice.<br>4. **Vegetables**: Fresh basil leaves are a great addition, but you could also add other vegetables like bell peppers, onions, mushrooms, or spinach.<br>5. **Filling**: You can fill your dough with any combination of your favorite toppings.<br><br>Here's a simple recipe to get you started:<br><br>**Ingredients:**<br>- 1 ½ cups all-purpose flour<br>- 3 tablespoons active dry yeast<br>- 2 teaspoons sugar<br>- 1 teaspoon salt<br>- 4 cups warm water (around 100°F)<br>- 1 cup tomato sauce<br>- ¾ cup shredded mozzarella cheese<br>- Fresh basil leaves<br><br>**Instructions:**<br>1. **Preheat Oven**: Preheat your oven to 450°F (230°C).<br>2. **Make the Dough**: In a large bowl, combine flour and yeast. Add sugar and salt. Mix until the dough comes together in a ball.<br>3. **Let Rise**: Place the dough in a greased bowl, cover it with a damp cloth, and let it rise in a warm place for about 1 hour or until doubled in size.<br>4. **Prepare Sauce**: In a separate bowl, mix together tomato sauce and water until smooth.<br>5. **Assemble the Pizza**: Punch down the risen dough and roll it out to your desired thickness on a floured surface.<br>6. **Add Toppings**: Spread the tomato sauce over the dough, then add your favorite vegetables and cheese.<br>7. **Bake**: Place the pizza in the preheated oven and bake for 10-12 minutes or until the crust is golden brown and the cheese is bubbly.<br><br>Enjoy your homemade pizza!|
+| ![Titanic_S](https://github.com/user-attachments/assets/bf6da76c-c9a4-41c6-bea1-2b4411dd4013) |**User**: \<image\>Which movie is this?<br>**Answer**: This image appears to be from the movie "The Princess Bride." The characters in the scene, along with their attire and expressions, are reminiscent of the iconic characters from that film.|
 
 ## LLM example.
 Notice the nice Markdown makeup of the answer!<br><br>
 **User**: Can you make me a C++ call that embeds the Pythagorean theorem?<br><br>
-**Answer**: Certainly! Here's a **C++** program that uses the **Pythagorean Theorem** to calculate the length of the hypotenuse in a right triangle given the lengths of the two legs. It includes a simple function to compute it using the formula:
+**Answer**: Certainly! The Pythagorean theorem states that in a right-angled triangle, the square of the length of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the lengths of the other two sides. Mathematically, this can be expressed as:
 
-\[
-c = \sqrt{a^2 + b^2}
-\]
+\[ c^2 = a^2 + b^2 \]
 
-We'll use `std::sqrt` from `<cmath>` and define a C++ function that takes two floating-point numbers as input (the two legs) and returns the hypotenuse.
+where \( c \) is the length of the hypotenuse, and \( a \) and \( b \) are the lengths of the other two sides.
+
+To embed this theorem in a C++ program, you would typically use the `cmath` library for mathematical operations. Here's an example of how you might implement this:
 
 ```cpp
 #include <iostream>
-#include <cmath>
-using namespace std;
-
-// Function to calculate the hypotenuse using Pythagorean Theorem
-double calculateHypotenuse(double a, double b) {
-    return sqrt(a * a + b * b);
-}
+#include <cmath> // For sqrt
 
 int main() {
-    // Example usage: Calculate hypotenuse for sides 3 and 4
-    double leg1 = 3.0;
-    double leg2 = 4.0;
+    double a = 3.0;
+    double b = 4.0;
+    double c;
 
-    double hypotenuse = calculateHypotenuse(leg1, leg2);
+    // Calculate the hypotenuse using the Pythagorean theorem
+    c = std::sqrt(a * a + b * b);
 
-    cout << "The hypotenuse of a right triangle with legs " 
-         << leg1 << " and " << leg2 << " is: " << hypotenuse << endl;
+    // Output the result
+    std::cout << "The length of the hypotenuse is: " << c << std::endl;
 
     return 0;
 }
 ```
 
-### Output:
-```
-The hypotenuse of a right triangle with legs 3 and 4 is: 5.0
-```
+In this example:
+- We include the `iostream` library for input and output operations.
+- We include the `cmath` library for mathematical functions like `sqrt`.
+- In the `main` function, we define two variables `a` and `b` with values of 3.0 and 4.0 respectively.
+- We calculate the hypotenuse `c` using the formula \( c = \sqrt{a^2 + b^2} \).
+- Finally, we output the result to the console.
 
----
-
-### How It Works:
-
-- `calculateHypotenuse(a, b)` computes \( \sqrt{a^2 + b^2} \)
-- The program uses the **Pythagorean Theorem** to find the hypotenuse.
-- This is a **pure C++ implementation**, not involving Python or any external libraries.
-
-Let me know if you'd like this version to work with **user input**, **multiple test cases**, or even **include error checking**!
+This program will print out the length of the hypotenuse for a right-angled triangle with sides 3 and 4.
 
 ------------
 
